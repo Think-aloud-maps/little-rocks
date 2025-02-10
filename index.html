@@ -212,8 +212,8 @@
             { title: "Current Time", info: "7:58 AM." },
             { title: "Address of Origin", info: "2201 David Grundfest Jr. Dr, Little Rock, AR 72206." },
             { title: "Address of Destination", info: "7812 T St, Little Rock, AR 72227." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "11.86 miles." },
+            { title: "Estimated Time to Destination", info: "24 minutes." },
             { title: "State of Charge of Battery", info: "11% charge." },
             { title: "Range of Current Battery", info: "33 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "25 miles." },
@@ -231,10 +231,10 @@
                 name: 'Pulaski County Assessor',
 
                 location: '2nd St & Spring St, Little Rock, AR 72201, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '5.81',
+                originTime: '13',
+                destDistance: '5.61',
+                destTime: '18',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Garden Inn & Suites',
 
                 location: '3801 W 8th St, Little Rock, AR 72204, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '4.64',
+                originTime: '9',
+                destDistance: '7.47',
+                destTime: '16',
 
 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
